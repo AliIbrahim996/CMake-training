@@ -1,11 +1,11 @@
 #include<iostream>
+#include <adder.h>
 using namespace std;
 
 int main(int argc,char** argv){
 
-    if (argc > 1)
-        return 1;
-    cout<<"Hello world";
+    
+    cout<<add(72.1f,73.8f)<<"\n";
 
     return 0;
 }
