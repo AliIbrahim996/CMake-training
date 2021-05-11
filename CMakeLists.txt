@@ -5,17 +5,27 @@ project(New_pro)
 add_executable(${PROJECT_NAME} main.cxx)
 
 
-
-
 add_subdirectory(Adder)
 
-
-target_include_directories(${PROJECT_NAME} PUBLIC Adder)
-
-target_link_directories(${PROJECT_NAME} PRIVATE Adder/)
+add_subdirectory(external/glfw)
 
 
-target_link_libraries(${PROJECT_NAME} adder)
+target_include_directories(
+        ${PROJECT_NAME} PUBLIC Adder
+        PUBLIC external/glfw/include
+)
+
+target_link_directories(${PROJECT_NAME}
+        PRIVATE Adder/
+        PRIVATE external/glfw/src
+
+)
+
+
+target_link_libraries(${PROJECT_NAME}
+        adder
+        glfw
+        )
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)  #to install our target  in destination  $CMAKE_INSTALL_PREFIX/bin
 

@@ -2,7 +2,8 @@ Build/
 bUILD/
 build/
 BUILD
-
+cmake-build-debug
+.idea
 *.mod
 *.smod
 
