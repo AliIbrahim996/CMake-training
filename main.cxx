@@ -1,13 +1,15 @@
 #include<iostream>
-#include <adder.h>
 #include<GLFW/glfw3.h>
 #include<NewProConfig.h>
 using namespace std;
 
 int main(int argc, char* argv[]) {
 
-    cout<<argv[0]<<"    Version "<<NewPro_VERSION_MAJOR<<"."<<NewPro_VERSION_MINOR<<endl;
-    cout << add(72.1f, 73.8f) << "\n";
+    cout<<argv[0]<<"    Version "<<NewPro_VERSION_MAJOR
+    <<"."<<NewPro_VERSION_MINOR<<endl;
+	#ifdef USE_ADDER
+		cout << add(72.1f, 73.8f) << "\n";
+	#endif
    
     GLFWwindow *window;
     if (!glfwInit()) {

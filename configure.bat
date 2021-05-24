@@ -1,3 +1,12 @@
 mkdir build
 
-cmake -D GLFW_BUILD_DOCS=OFF .. -S . -B build
+cd build
+
+cmake ..
+
+cmake --build .
+
+cmake --build . --config Release
+
+
+cmake -P cmake_install.cmake
