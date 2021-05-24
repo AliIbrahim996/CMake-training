@@ -4,6 +4,7 @@ build/
 BUILD
 cmake-build-debug
 .idea
+.vscode
 *.mod
 *.smod
 

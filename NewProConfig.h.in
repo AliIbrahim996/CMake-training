@@ -1,0 +1,2 @@
+#define NewPro_VERSION_MAJOR @NewPro_VERSION_MAJOR@
+#define NewPro_VERSION_MINOR @NewPro_VERSION_MINOR@
