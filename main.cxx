@@ -8,7 +8,10 @@ int main(int argc, char* argv[]) {
     cout<<argv[0]<<"    Version "<<NewPro_VERSION_MAJOR
     <<"."<<NewPro_VERSION_MINOR<<endl;
 	#ifdef USE_ADDER
-		cout << add(72.1f, 73.8f) << "\n";
+    float a,b;
+    cout<<"input two numbers\n";
+    cin>>a>>b;
+		cout << add(a, b) << "\n";
 	#endif
    
     GLFWwindow *window;
